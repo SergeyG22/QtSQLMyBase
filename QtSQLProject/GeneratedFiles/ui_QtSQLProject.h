@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'QtSQLProject.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.1
+** Created by: Qt User Interface Compiler version 5.13.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -52,27 +52,27 @@ public:
     void setupUi(QMainWindow *QtSQLProjectClass)
     {
         if (QtSQLProjectClass->objectName().isEmpty())
-            QtSQLProjectClass->setObjectName(QStringLiteral("QtSQLProjectClass"));
+            QtSQLProjectClass->setObjectName(QString::fromUtf8("QtSQLProjectClass"));
         QtSQLProjectClass->resize(1094, 579);
         QFont font;
         font.setBold(false);
         font.setItalic(false);
         font.setWeight(50);
         QtSQLProjectClass->setFont(font);
-        QtSQLProjectClass->setStyleSheet(QStringLiteral(""));
+        QtSQLProjectClass->setStyleSheet(QString::fromUtf8(""));
         centralWidget = new QWidget(QtSQLProjectClass);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(30, 300, 311, 51));
         QFont font1;
-        font1.setFamily(QStringLiteral("Courier"));
+        font1.setFamily(QString::fromUtf8("Courier"));
         font1.setPointSize(13);
         font1.setBold(true);
         font1.setWeight(75);
         pushButton_2->setFont(font1);
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setStyleSheet(QLatin1String("QPushButton\n"
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "background: #0ee10e;\n"
 "    color: #fff; \n"
@@ -83,7 +83,7 @@ public:
 "border: 3px solid  #060606 ;      }"));
         pushButton_2->setAutoRepeat(false);
         layoutWidget = new QWidget(centralWidget);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(20, 10, 481, 261));
         QFont font2;
         font2.setPointSize(15);
@@ -91,19 +91,19 @@ public:
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
         email_obj = new QPushButton(layoutWidget);
-        email_obj->setObjectName(QStringLiteral("email_obj"));
+        email_obj->setObjectName(QString::fromUtf8("email_obj"));
         QFont font3;
-        font3.setFamily(QStringLiteral("Calibri"));
+        font3.setFamily(QString::fromUtf8("Calibri"));
         font3.setPointSize(14);
         font3.setBold(true);
         font3.setItalic(false);
         font3.setWeight(75);
         email_obj->setFont(font3);
         email_obj->setCursor(QCursor(Qt::PointingHandCursor));
-        email_obj->setStyleSheet(QLatin1String("QPushButton {\n"
+        email_obj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background: #1535f4;\n"
 "    color: #fff; \n"
 "    padding: 10px; \n"
@@ -116,13 +116,13 @@ public:
         gridLayout->addWidget(email_obj, 7, 0, 1, 1);
 
         surnameEdit = new QLineEdit(layoutWidget);
-        surnameEdit->setObjectName(QStringLiteral("surnameEdit"));
+        surnameEdit->setObjectName(QString::fromUtf8("surnameEdit"));
         QFont font4;
         font4.setPointSize(17);
         font4.setBold(false);
         font4.setWeight(50);
         surnameEdit->setFont(font4);
-        surnameEdit->setStyleSheet(QLatin1String("QLineEdit\n"
+        surnameEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "\n"
 "{\n"
 "border-radius: 5px; \n"
@@ -133,10 +133,10 @@ public:
         gridLayout->addWidget(surnameEdit, 4, 1, 1, 1);
 
         name_obj = new QPushButton(layoutWidget);
-        name_obj->setObjectName(QStringLiteral("name_obj"));
+        name_obj->setObjectName(QString::fromUtf8("name_obj"));
         name_obj->setFont(font3);
         name_obj->setCursor(QCursor(Qt::PointingHandCursor));
-        name_obj->setStyleSheet(QLatin1String("QPushButton {\n"
+        name_obj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background: #1535f4;\n"
 "    color: #fff; \n"
 "    padding: 10px; \n"
@@ -149,9 +149,9 @@ public:
         gridLayout->addWidget(name_obj, 2, 0, 1, 1);
 
         phoneEdit = new QLineEdit(layoutWidget);
-        phoneEdit->setObjectName(QStringLiteral("phoneEdit"));
+        phoneEdit->setObjectName(QString::fromUtf8("phoneEdit"));
         phoneEdit->setFont(font4);
-        phoneEdit->setStyleSheet(QLatin1String("QLineEdit\n"
+        phoneEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "\n"
 "{\n"
 "border-radius: 5px; \n"
@@ -162,10 +162,10 @@ public:
         gridLayout->addWidget(phoneEdit, 5, 1, 1, 1);
 
         surname_obj = new QPushButton(layoutWidget);
-        surname_obj->setObjectName(QStringLiteral("surname_obj"));
+        surname_obj->setObjectName(QString::fromUtf8("surname_obj"));
         surname_obj->setFont(font3);
         surname_obj->setCursor(QCursor(Qt::PointingHandCursor));
-        surname_obj->setStyleSheet(QLatin1String("QPushButton {\n"
+        surname_obj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background: #1535f4;\n"
 "    color: #fff; \n"
 "    padding: 10px; \n"
@@ -178,9 +178,9 @@ public:
         gridLayout->addWidget(surname_obj, 4, 0, 1, 1);
 
         nameEdit = new QLineEdit(layoutWidget);
-        nameEdit->setObjectName(QStringLiteral("nameEdit"));
+        nameEdit->setObjectName(QString::fromUtf8("nameEdit"));
         nameEdit->setFont(font4);
-        nameEdit->setStyleSheet(QLatin1String("QLineEdit\n"
+        nameEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "\n"
 "{\n"
 "border-radius: 5px; \n"
@@ -191,9 +191,9 @@ public:
         gridLayout->addWidget(nameEdit, 2, 1, 1, 1);
 
         emailEdit = new QLineEdit(layoutWidget);
-        emailEdit->setObjectName(QStringLiteral("emailEdit"));
+        emailEdit->setObjectName(QString::fromUtf8("emailEdit"));
         emailEdit->setFont(font4);
-        emailEdit->setStyleSheet(QLatin1String("QLineEdit\n"
+        emailEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "\n"
 "{\n"
 "border-radius: 5px; \n"
@@ -204,10 +204,10 @@ public:
         gridLayout->addWidget(emailEdit, 7, 1, 1, 1);
 
         phone_obj = new QPushButton(layoutWidget);
-        phone_obj->setObjectName(QStringLiteral("phone_obj"));
+        phone_obj->setObjectName(QString::fromUtf8("phone_obj"));
         phone_obj->setFont(font3);
         phone_obj->setCursor(QCursor(Qt::PointingHandCursor));
-        phone_obj->setStyleSheet(QLatin1String("QPushButton {\n"
+        phone_obj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background: #1535f4;\n"
 "    color: #fff; \n"
 "    padding: 10px; \n"
@@ -220,16 +220,16 @@ public:
         gridLayout->addWidget(phone_obj, 5, 0, 1, 1);
 
         pushButton_6 = new QPushButton(centralWidget);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
         pushButton_6->setGeometry(QRect(700, 150, 311, 51));
         QFont font5;
-        font5.setFamily(QStringLiteral("Calibri"));
+        font5.setFamily(QString::fromUtf8("Calibri"));
         font5.setPointSize(15);
         font5.setBold(true);
         font5.setWeight(75);
         pushButton_6->setFont(font5);
         pushButton_6->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_6->setStyleSheet(QLatin1String("\n"
+        pushButton_6->setStyleSheet(QString::fromUtf8("\n"
 "QPushButton {\n"
 "	border-color: rgb(0, 255, 0);\n"
 "    background: #1535f4;\n"
@@ -242,11 +242,11 @@ public:
 " QPushButton:hover:!pressed {  background: #fa0707;\n"
 "border: 3px solid  #060606 ;      }"));
         pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(700, 90, 311, 51));
         pushButton->setFont(font5);
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setStyleSheet(QLatin1String("\n"
+        pushButton->setStyleSheet(QString::fromUtf8("\n"
 "QPushButton {\n"
 "	border-color: rgb(0, 255, 0);\n"
 "    background: #1535f4;\n"
@@ -259,11 +259,11 @@ public:
 " QPushButton:hover:!pressed {  background: #fa0707;\n"
 "border: 3px solid  #060606 ;      }"));
         pushButton_4 = new QPushButton(centralWidget);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(700, 30, 311, 51));
         pushButton_4->setFont(font5);
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_4->setStyleSheet(QLatin1String("\n"
+        pushButton_4->setStyleSheet(QString::fromUtf8("\n"
 "QPushButton {\n"
 "	border-color: rgb(0, 255, 0);\n"
 "    background: #1535f4;\n"
@@ -276,11 +276,11 @@ public:
 " QPushButton:hover:!pressed {  background: #fa0707;\n"
 "border: 3px solid  #060606 ;      }"));
         pushButton_3 = new QPushButton(centralWidget);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(700, 210, 311, 51));
         pushButton_3->setFont(font5);
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_3->setStyleSheet(QLatin1String("\n"
+        pushButton_3->setStyleSheet(QString::fromUtf8("\n"
 "QPushButton {\n"
 "	border-color: rgb(0, 255, 0);\n"
 "    background: #1535f4;\n"
@@ -293,13 +293,13 @@ public:
 " QPushButton:hover:!pressed {  background: #fa0707;\n"
 "border: 3px solid  #060606 ;      }"));
         splitter = new QSplitter(centralWidget);
-        splitter->setObjectName(QStringLiteral("splitter"));
+        splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setGeometry(QRect(30, 470, 386, 50));
         splitter->setOrientation(Qt::Horizontal);
         id_obj = new QPushButton(splitter);
-        id_obj->setObjectName(QStringLiteral("id_obj"));
+        id_obj->setObjectName(QString::fromUtf8("id_obj"));
         QFont font6;
-        font6.setFamily(QStringLiteral("Calibri"));
+        font6.setFamily(QString::fromUtf8("Calibri"));
         font6.setPointSize(14);
         font6.setBold(true);
         font6.setItalic(false);
@@ -308,7 +308,7 @@ public:
         id_obj->setFont(font6);
         id_obj->setCursor(QCursor(Qt::PointingHandCursor));
         id_obj->setAutoFillBackground(false);
-        id_obj->setStyleSheet(QLatin1String("QPushButton {\n"
+        id_obj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background: red;\n"
 "    color: #fff; \n"
 "    padding: 10px; \n"
@@ -319,9 +319,9 @@ public:
 "border: 3px solid  #060606 ;      }"));
         splitter->addWidget(id_obj);
         idEdit = new QLineEdit(splitter);
-        idEdit->setObjectName(QStringLiteral("idEdit"));
+        idEdit->setObjectName(QString::fromUtf8("idEdit"));
         idEdit->setFont(font4);
-        idEdit->setStyleSheet(QLatin1String("QLineEdit\n"
+        idEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
 "\n"
 "{ \n"
 "border: 3px solid  #060606 ;\n"
@@ -329,9 +329,9 @@ public:
 "}"));
         splitter->addWidget(idEdit);
         textBrowser = new QTextBrowser(centralWidget);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
         textBrowser->setGeometry(QRect(700, 280, 311, 241));
-        textBrowser->setStyleSheet(QLatin1String("textBrowser\n"
+        textBrowser->setStyleSheet(QString::fromUtf8("textBrowser\n"
 "{\n"
 "color:rgb(255, 255, 255);\n"
 "}"));
@@ -345,10 +345,10 @@ public:
         pushButton_6->raise();
         textBrowser->raise();
         mainToolBar = new QToolBar(QtSQLProjectClass);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
         QtSQLProjectClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(QtSQLProjectClass);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
+        statusBar->setObjectName(QString::fromUtf8("statusBar"));
         QtSQLProjectClass->setStatusBar(statusBar);
         QWidget::setTabOrder(name_obj, surname_obj);
         QWidget::setTabOrder(surname_obj, phone_obj);
@@ -373,20 +373,20 @@ public:
 
     void retranslateUi(QMainWindow *QtSQLProjectClass)
     {
-        QtSQLProjectClass->setWindowTitle(QApplication::translate("QtSQLProjectClass", "\320\243\321\207\320\265\321\202\320\275\320\260\321\217 \320\261\320\260\320\267\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", nullptr));
-        pushButton_2->setText(QApplication::translate("QtSQLProjectClass", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\262 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205", nullptr));
-        email_obj->setText(QApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\277\320\276\321\207\321\202\320\265", nullptr));
+        QtSQLProjectClass->setWindowTitle(QCoreApplication::translate("QtSQLProjectClass", "\320\243\321\207\320\265\321\202\320\275\320\260\321\217 \320\261\320\260\320\267\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\262 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205", nullptr));
+        email_obj->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\277\320\276\321\207\321\202\320\265", nullptr));
         surnameEdit->setText(QString());
-        name_obj->setText(QApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\270\320\274\320\265\320\275\320\270", nullptr));
-        surname_obj->setText(QApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\204\320\260\320\274\320\270\320\273\320\270\320\270", nullptr));
-        phone_obj->setText(QApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\202\320\265\320\273\320\265\321\204\320\276\320\275\321\203", nullptr));
-        pushButton_6->setText(QApplication::translate("QtSQLProjectClass", "\320\276\321\207\320\270\321\201\321\202\320\270\321\202\321\214 \320\277\320\276\320\273\321\217 \320\262\320\262\320\276\320\264\320\260", nullptr));
-        pushButton->setText(QApplication::translate("QtSQLProjectClass", "\321\203\320\264\320\260\320\273\320\270\321\202\321\214 \320\267\320\260\320\277\320\270\321\201\321\214 \320\277\320\276 ID", nullptr));
-        pushButton_4->setText(QApplication::translate("QtSQLProjectClass", "\320\276\321\202\320\276\320\261\321\200\320\260\320\267\320\270\321\202\321\214 \320\262\321\201\320\265 \320\267\320\260\320\277\320\270\321\201\320\270", nullptr));
-        pushButton_3->setText(QApplication::translate("QtSQLProjectClass", "\321\203\320\264\320\260\320\273\320\270\321\202\321\214 \320\262\321\201\320\265 \320\267\320\260\320\277\320\270\321\201\320\270", nullptr));
-        id_obj->setText(QApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 ID", nullptr));
+        name_obj->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\270\320\274\320\265\320\275\320\270", nullptr));
+        surname_obj->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\204\320\260\320\274\320\270\320\273\320\270\320\270", nullptr));
+        phone_obj->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\202\320\265\320\273\320\265\321\204\320\276\320\275\321\203", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\276\321\207\320\270\321\201\321\202\320\270\321\202\321\214 \320\277\320\276\320\273\321\217 \320\262\320\262\320\276\320\264\320\260", nullptr));
+        pushButton->setText(QCoreApplication::translate("QtSQLProjectClass", "\321\203\320\264\320\260\320\273\320\270\321\202\321\214 \320\267\320\260\320\277\320\270\321\201\321\214 \320\277\320\276 ID", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\276\321\202\320\276\320\261\321\200\320\260\320\267\320\270\321\202\321\214 \320\262\321\201\320\265 \320\267\320\260\320\277\320\270\321\201\320\270", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("QtSQLProjectClass", "\321\203\320\264\320\260\320\273\320\270\321\202\321\214 \320\262\321\201\320\265 \320\267\320\260\320\277\320\270\321\201\320\270", nullptr));
+        id_obj->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 ID", nullptr));
         idEdit->setText(QString());
-        textBrowser->setHtml(QApplication::translate("QtSQLProjectClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        textBrowser->setHtml(QCoreApplication::translate("QtSQLProjectClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"

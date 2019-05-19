@@ -77,19 +77,19 @@ QtSQLProject::QtSQLProject(QWidget *parent)
 
 
 	db = QSqlDatabase::addDatabase("QMYSQL");
-	db.setHostName("127.0.0.1");
+	db.setHostName("192.168.1.163");
 	db.setDatabaseName("work_with_book");
-	db.setUserName("root");
-//	db.setUserName("user"); // добавлен user вместо root
+	db.setUserName("test"); // добавлен user вместо root
 	db.setPort(3306); // добавлен номер порта	
-	db.setPassword("login13");	
+	db.setPassword("login13");
+
 
 
 
 	if (!db.open())
 	{
 		qDebug() << db.lastError().text();
-
+		std::cout << "fatal error\n";
 	}
 
 	else ui.statusBar->showMessage(QString::fromLocal8Bit("Соединение с базой данных установлено!"));
