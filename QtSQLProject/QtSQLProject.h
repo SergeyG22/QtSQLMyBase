@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 #include <QtSql/qsqldatabase.h>
 #include <QtSql/qsqlquery.h>
 #include <QtSql/qsqltablemodel.h>
@@ -16,44 +17,75 @@
 #include "ui_QtSQLProject.h"
 
 
+class IDBFromTextFile {
+	std::string text;
+	QList<QString>parameters;
+	std::fstream in {"DataBaseConfig/databaseconfig.txt"};
+public:
+	IDBFromTextFile() {
+		if (in.is_open()) {			
+			while (getline(in, text)) {
+				parameters.push_back(QString::fromStdString(text));
+			}
+		}
+		else {
+			std::cout << "error opening a text file\n";
+		}
+	}
+	QList<QString>get_parameters_db() { return parameters; };
+};
 
 
-class QtSQLProject : public QMainWindow {
-	Q_OBJECT
-	Ui::QtSQLProjectClass ui;
-	QSqlQueryModel model;
+class IDBConnectionConfig {
+public:
+	virtual ~IDBConnectionConfig() { };
+	virtual QSqlDatabase data_base_parameters() = 0;
+};
+
+class IDBConnectionFromTextFile: public IDBConnectionConfig {
 	QSqlDatabase db;
-	QSqlQuery query;
+	IDBFromTextFile info;
+public:
+	QSqlDatabase data_base_parameters() override;
+};
+
+
+struct InputInformation {
 	QString surname;
 	QString name;
 	QString email;
 	QString phone;
 	QString name_seach;
-	QString message;
-	QString k = '\'';
+};
+
+struct MessageBoxInformation {
 	QMessageBox clear_db;
 	QMessageBox add_db;
 	QMessageBox msg_not_found;
 	QMessageBox drop_table;
-	QMessageBox incorrect_editline;
+};
+
+struct SqlParameters {
+	QSqlQueryModel model;
+	QSqlDatabase db;
+	QSqlQuery query;
+};
+
+class QtSQLProject: public QMainWindow,InputInformation,MessageBoxInformation, SqlParameters{
+	Q_OBJECT
+	Ui::QtSQLProjectClass ui;	
 	QTableView view;
-	QString surname_ = "surname =";
-	QString name_ = "name =";
-	QString email_ = "email =";
-	QString phone_ = "phone =";
-	QString OR = " OR ";
-	QString id_seach;
-	int ret;
+	IDBConnectionFromTextFile* connection_from_text_file = nullptr;
 public:
 	QtSQLProject(QWidget *parent = Q_NULLPTR);
-	QLabel image_pix;	
+	~QtSQLProject();	
 public slots:
-	void add_in_table();
-	void seach_name();
-	void seach_surname();
-	void seach_email();
-	void seach_phone();
-	void seach_id();
+	void add_to_the_table();
+	void find_name();
+	void find_surname();
+	void find_email();
+	void find_phone();
+	void find_id();
 	void clear_table();
 	void clear_form();
 	void clear_id();

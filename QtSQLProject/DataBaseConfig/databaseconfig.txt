@@ -1,0 +1,6 @@
+QMYSQL
+127.0.0.1
+data_base
+root
+3306
+login13
