@@ -3,9 +3,8 @@
 
 
 QtSQLProject::QtSQLProject(QWidget *parent)
-	: QMainWindow(parent)
-{
-	
+	: QMainWindow(parent) {	
+
 	ui.setupUi(this);
 	ui.centralWidget->setStyleSheet("background: grey");
 	ui.textBrowser->setStyleSheet("background: white");
@@ -47,8 +46,7 @@ QtSQLProject::QtSQLProject(QWidget *parent)
 
 
 
-void QtSQLProject::add_in_table()
-{
+void QtSQLProject::add_in_table() {
 	if (ui.nameEdit->text().size() > 0) {
 		name = ui.nameEdit->text();
 	}
@@ -61,7 +59,6 @@ void QtSQLProject::add_in_table()
 	if (ui.surnameEdit->text().size() > 0) {
 		surname = ui.surnameEdit->text();
 	}
-
 	else {
 		incorrect_editline.setText(QString::fromLocal8Bit("Поле фамилия не должно быть пустым"));
 		incorrect_editline.exec();
@@ -71,7 +68,6 @@ void QtSQLProject::add_in_table()
 	if (ui.emailEdit->text().size() > 0) {
 		email = ui.emailEdit->text();
 	}
-
 	else {
 		incorrect_editline.setText(QString::fromLocal8Bit("Поле почта не должно быть пустым"));		
 		incorrect_editline.exec();
@@ -81,7 +77,6 @@ void QtSQLProject::add_in_table()
 	if (ui.phoneEdit->text().size() > 0) {
 		phone = ui.phoneEdit->text();
 	}
-
 	else {
 		incorrect_editline.setText(QString::fromLocal8Bit("Поле телефон не должно быть пустым"));
 		incorrect_editline.exec();
@@ -101,24 +96,21 @@ void QtSQLProject::add_in_table()
 		qDebug() << query.lastError().databaseText();		
 	}
 	while (query.next()) {		
-		qDebug() << query.value(0).toString();
-		
+		qDebug() << query.value(0).toString();		
 	}
 	
-	if (ui.nameEdit->text() > 0 || ui.surnameEdit->text() > 0 
-		|| ui.emailEdit->text() > 0 || ui.phoneEdit->text() > 0) {
+	if (ui.nameEdit->text() > 0 || ui.surnameEdit->text() > 0 || ui.emailEdit->text() > 0 || ui.phoneEdit->text() > 0) {
 		add_db.setText(QString::fromLocal8Bit("Значения добавлены!"));
 		add_db.exec();
-		ui.nameEdit->text() = "";
-		ui.surnameEdit->text() = "";
-		ui.emailEdit->text() = "";
-		ui.phoneEdit->text() = "";
+		ui.nameEdit->text().clear();
+		ui.surnameEdit->text().clear();
+		ui.emailEdit->text().clear();
+		ui.phoneEdit->text().clear();
 	}	
 }
 
 
-void QtSQLProject::seach_name()
-{
+void QtSQLProject::seach_name() {
 	 query = QSqlQuery(db);	
 	 name_seach = "SELECT * FROM addressbook WHERE name = " + k + ui.nameEdit->text() + k;
 	 message = QString::fromLocal8Bit(" - значение не найдено");
@@ -138,7 +130,6 @@ void QtSQLProject::seach_name()
 		 msg_not_found.setText(ui.nameEdit->text() + message);
 		 msg_not_found.exec();
 	 }
-
 }
 
 void QtSQLProject::clear_table() {
@@ -158,7 +149,6 @@ void QtSQLProject::clear_table() {
 			qDebug() << query.lastError().databaseText();
 		}
 		while (query.next()) {
-
 			qDebug() << query.value(0).toString();
 		}
 		clear_db.setText(QString::fromLocal8Bit("Все записи удалены!"));
@@ -168,11 +158,11 @@ void QtSQLProject::clear_table() {
 }
 
 void QtSQLProject::clear_form() {	
-	ui.nameEdit->setText("");
-	ui.surnameEdit->setText("");
-	ui.phoneEdit->setText("");
-	ui.emailEdit->setText("");
-	ui.idEdit->setText("");
+	ui.nameEdit->clear(); 
+	ui.surnameEdit->clear();
+	ui.phoneEdit->clear();
+	ui.emailEdit->clear();
+	ui.idEdit->clear();
 }
 
 void QtSQLProject::seach_surname() {
@@ -196,7 +186,6 @@ void QtSQLProject::seach_surname() {
 		msg_not_found.setText(ui.surnameEdit->text() + message);
 		msg_not_found.exec();
 	}
-
 }
 
 
@@ -206,7 +195,6 @@ void QtSQLProject::seach_email()  {
 	message = QString::fromLocal8Bit(" - значение не найдено");
 	model.setQuery(name_seach);
 	view.setModel(&model);
-
 	view.resizeColumnsToContents();
 	
 	if (!query.exec(name_seach)) {
@@ -222,21 +210,20 @@ void QtSQLProject::seach_email()  {
 		msg_not_found.setText(ui.emailEdit->text() + message);
 		msg_not_found.exec();
 	}
-
 }
 
 void QtSQLProject::seach_phone() {
 	query = QSqlQuery(db);
     name_seach = "SELECT * FROM addressbook WHERE phone = " + k + ui.phoneEdit->text() + k;
 	message = QString::fromLocal8Bit(" - значение не найдено");
-	model.setQuery(name_seach);//--  отображает результат запроса в виде таблицы
+	model.setQuery(name_seach);
 	view.setModel(&model);
 	
 	if (!query.exec(name_seach)) {
 		qDebug() << query.lastError().databaseText();
 	}
 
-	while (query.next()){
+	while (query.next()) {
 		view.show();
 		return;
 	}
@@ -254,7 +241,7 @@ void QtSQLProject::seach_id() {
 	model.setQuery(name_seach);
 	view.setModel(&model);
 
-	if (!query.exec(name_seach)){
+	if (!query.exec(name_seach)) {
 		qDebug() << query.lastError().databaseText();
 	}
 
@@ -272,9 +259,8 @@ void QtSQLProject::seach_id() {
 
 
 
-void QtSQLProject::clear_id()                                                  // Функция удаления записи по ID
-{	
-	if (ui.idEdit->text() > 0)  {                                             // Доделать корректность ввода ID и удаления записи 
+void QtSQLProject::clear_id()  {                                                 
+	if (ui.idEdit->text() > 0)  {                                            
 		drop_table.setText(QString::fromLocal8Bit("Удалить запись?"));
 		drop_table.setIcon(QMessageBox::Warning);
 		drop_table.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
@@ -301,8 +287,7 @@ void QtSQLProject::clear_id()                                                  /
 }
 
 
-void QtSQLProject::show_table()
-{	
+void QtSQLProject::show_table() {	
 	query = QSqlQuery(db);
 	name_seach = "SELECT * FROM addressbook";	
 	model.setQuery(name_seach);          

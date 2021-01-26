@@ -18,13 +18,8 @@
 
 
 
-class QtSQLProject : public QMainWindow 
-{
+class QtSQLProject : public QMainWindow {
 	Q_OBJECT
-public:
-	QtSQLProject(QWidget *parent = Q_NULLPTR);
-	QLabel image_pix;
-private:
 	Ui::QtSQLProjectClass ui;
 	QSqlQueryModel model;
 	QSqlDatabase db;
@@ -42,13 +37,16 @@ private:
 	QMessageBox drop_table;
 	QMessageBox incorrect_editline;
 	QTableView view;
-	QString surname_="surname =";
+	QString surname_ = "surname =";
 	QString name_ = "name =";
-	QString email_="email =";
-	QString phone_="phone =";
+	QString email_ = "email =";
+	QString phone_ = "phone =";
 	QString OR = " OR ";
 	QString id_seach;
 	int ret;
+public:
+	QtSQLProject(QWidget *parent = Q_NULLPTR);
+	QLabel image_pix;	
 public slots:
 	void add_in_table();
 	void seach_name();
