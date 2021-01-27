@@ -518,7 +518,7 @@ color:rgb(255, 255, 255);
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Данная программа представляет собой простую базу данных.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;1)Заполните поля:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;- Найти по имени&lt;/span&gt;&lt;/p&gt;
@@ -532,6 +532,148 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="data_base_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>290</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>QMYSQL</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="host_name_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>320</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>127.0.0.1</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="data_base_name_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>350</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>data_base</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="user_name_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>380</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>root</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="port_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>410</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>3306</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>440</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+
+{
+background:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>login13</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_connection">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>480</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background: red;
+    color: #fff; 
+  
+   }
+ QPushButton:hover:!pressed {  background: #fa0707;
+border: 2px solid  #060606 ;      }</string>
+    </property>
+    <property name="text">
+     <string>Подключиться</string>
+    </property>
+   </widget>
    <zorder>splitter</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_4</zorder>
@@ -540,6 +682,13 @@ p, li { white-space: pre-wrap; }
    <zorder>layoutWidget</zorder>
    <zorder>pushButton_6</zorder>
    <zorder>textBrowser</zorder>
+   <zorder>data_base_lineEdit</zorder>
+   <zorder>host_name_lineEdit</zorder>
+   <zorder>data_base_name_lineEdit</zorder>
+   <zorder>user_name_lineEdit</zorder>
+   <zorder>port_lineEdit</zorder>
+   <zorder>password_lineEdit</zorder>
+   <zorder>pushButton_connection</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

@@ -80,6 +80,7 @@ public:
 	QtSQLProject(QWidget *parent = Q_NULLPTR);
 	~QtSQLProject();	
 public slots:
+	void connect_to_database();
 	void add_to_the_table();
 	void find_name();
 	void find_surname();

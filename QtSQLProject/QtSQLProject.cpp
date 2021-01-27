@@ -21,6 +21,8 @@ QtSQLProject::QtSQLProject(QWidget *parent) : QMainWindow(parent) {
 	connect(ui.pushButton_4, &QPushButton::clicked, this, &QtSQLProject::show_table);
 	connect(ui.pushButton_6, &QPushButton::clicked,this, &QtSQLProject::clear_form);
 	
+	connect(ui.pushButton_connection,&QPushButton::clicked,this, &QtSQLProject::connect_to_database);
+
 	ui.pushButton->setToolTip(QString::fromLocal8Bit("Введите в поле номер ID и нажмите 'удалить запись по ID' для удаления записи"));
 	ui.pushButton_3->setToolTip(QString::fromLocal8Bit("Удаляет все записи из базы данных"));
 	ui.pushButton_4->setToolTip(QString::fromLocal8Bit("Нажмите чтобы отобразить все имеющиеся записи"));
@@ -33,6 +35,11 @@ QtSQLProject::QtSQLProject(QWidget *parent) : QMainWindow(parent) {
 	if (!db.open()) {
 		qDebug() << db.lastError().text();
 		std::cout << "error connecting to the database\n";
+	}
+	else {
+		QMessageBox msgBox;
+		msgBox.setText(QString::fromLocal8Bit("Подключение к базе данных установлено!"));
+		msgBox.exec();
 	}
 	
 }
@@ -298,20 +305,47 @@ void QtSQLProject::show_table() {
 	}
 }
 
-QSqlDatabase IDBConnectionFromTextFile::data_base_parameters() {
-	QString data_base = info.get_parameters_db().takeAt(0);
-	QString host_name = info.get_parameters_db().takeAt(1);
-	QString data_base_name = info.get_parameters_db().takeAt(2);
-	QString user_name = info.get_parameters_db().takeAt(3);	
-	QString password = info.get_parameters_db().takeAt(5);
-	int port = info.get_parameters_db().takeAt(4).toInt();
-
+void QtSQLProject::connect_to_database(){
+	QString data_base = ui.data_base_lineEdit->text();
+	QString host_name = ui.host_name_lineEdit->text();
+	QString data_base_name = ui.data_base_name_lineEdit->text();
+	QString user_name = ui.user_name_lineEdit->text();
+	QString password = ui.password_lineEdit->text();
+	int port = ui.port_lineEdit->text().toInt();
+	
 	db = QSqlDatabase::addDatabase(data_base);
 	db.setHostName(host_name);
 	db.setDatabaseName(data_base_name);
 	db.setUserName(user_name);
 	db.setPort(port);
 	db.setPassword(password);
+
+	if (!db.open()) {
+		qDebug() << db.lastError().text();
+		std::cout << "error connecting to the database\n";
+	}
+	else {
+		QMessageBox msgBox;
+		msgBox.setText(QString::fromLocal8Bit("Подключение к базе данных установлено!"));
+		msgBox.exec();
+	}
+}
+
+
+QSqlDatabase IDBConnectionFromTextFile::data_base_parameters() {
+
+	QString connetion_parameters[6] = {"data_base","host_name","data_base_name","user_name","password","port" };
+
+	for (int i = 0; i < info.get_parameters_db().size(); ++i) {
+		connetion_parameters[i] = info.get_parameters_db().takeAt(i); 
+	}
+
+	db = QSqlDatabase::addDatabase(connetion_parameters[0]);
+	db.setHostName(connetion_parameters[1]);
+	db.setDatabaseName(connetion_parameters[2]);
+	db.setUserName(connetion_parameters[3]);
+	db.setPort(connetion_parameters[4].toInt());
+	db.setPassword(connetion_parameters[5]);
 	return db;
 }
 

@@ -46,6 +46,13 @@ public:
     QPushButton *id_obj;
     QLineEdit *idEdit;
     QTextBrowser *textBrowser;
+    QLineEdit *data_base_lineEdit;
+    QLineEdit *host_name_lineEdit;
+    QLineEdit *data_base_name_lineEdit;
+    QLineEdit *user_name_lineEdit;
+    QLineEdit *port_lineEdit;
+    QLineEdit *password_lineEdit;
+    QPushButton *pushButton_connection;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -335,6 +342,64 @@ public:
 "{\n"
 "color:rgb(255, 255, 255);\n"
 "}"));
+        data_base_lineEdit = new QLineEdit(centralWidget);
+        data_base_lineEdit->setObjectName(QString::fromUtf8("data_base_lineEdit"));
+        data_base_lineEdit->setGeometry(QRect(550, 290, 113, 20));
+        data_base_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        host_name_lineEdit = new QLineEdit(centralWidget);
+        host_name_lineEdit->setObjectName(QString::fromUtf8("host_name_lineEdit"));
+        host_name_lineEdit->setGeometry(QRect(550, 320, 113, 20));
+        host_name_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        data_base_name_lineEdit = new QLineEdit(centralWidget);
+        data_base_name_lineEdit->setObjectName(QString::fromUtf8("data_base_name_lineEdit"));
+        data_base_name_lineEdit->setGeometry(QRect(550, 350, 113, 20));
+        data_base_name_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        user_name_lineEdit = new QLineEdit(centralWidget);
+        user_name_lineEdit->setObjectName(QString::fromUtf8("user_name_lineEdit"));
+        user_name_lineEdit->setGeometry(QRect(550, 380, 113, 20));
+        user_name_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        port_lineEdit = new QLineEdit(centralWidget);
+        port_lineEdit->setObjectName(QString::fromUtf8("port_lineEdit"));
+        port_lineEdit->setGeometry(QRect(550, 410, 113, 20));
+        port_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        password_lineEdit = new QLineEdit(centralWidget);
+        password_lineEdit->setObjectName(QString::fromUtf8("password_lineEdit"));
+        password_lineEdit->setGeometry(QRect(550, 440, 113, 20));
+        password_lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit\n"
+"\n"
+"{\n"
+"background:white;\n"
+"}"));
+        pushButton_connection = new QPushButton(centralWidget);
+        pushButton_connection->setObjectName(QString::fromUtf8("pushButton_connection"));
+        pushButton_connection->setGeometry(QRect(560, 480, 91, 23));
+        pushButton_connection->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background: red;\n"
+"    color: #fff; \n"
+"  \n"
+"   }\n"
+" QPushButton:hover:!pressed {  background: #fa0707;\n"
+"border: 2px solid  #060606 ;      }"));
         QtSQLProjectClass->setCentralWidget(centralWidget);
         splitter->raise();
         pushButton->raise();
@@ -344,6 +409,13 @@ public:
         layoutWidget->raise();
         pushButton_6->raise();
         textBrowser->raise();
+        data_base_lineEdit->raise();
+        host_name_lineEdit->raise();
+        data_base_name_lineEdit->raise();
+        user_name_lineEdit->raise();
+        port_lineEdit->raise();
+        password_lineEdit->raise();
+        pushButton_connection->raise();
         mainToolBar = new QToolBar(QtSQLProjectClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
         QtSQLProjectClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
@@ -389,15 +461,15 @@ public:
         textBrowser->setHtml(QCoreApplication::translate("QtSQLProjectClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">\320\224\320\260\320\275\320\275\320\260\321\217 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\320\274\320\260 \320\277\321\200\320\265\320\264\321\201\321\202\320\260\320\262\320\273\321\217\320\265\321\202 \321\201\320\276\320\261\320\276\320\271 \320\277\321\200\320\276\321\201\321\202\321\203\321\216 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:"
-                        "0px;\"><span style=\" font-size:9pt;\">1)\320\227\320\260\320\277\320\276\320\273\320\275\320\270\321\202\320\265 \320\277\320\276\320\273\321\217:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
+                        ":0px;\"><span style=\" font-size:9pt;\">1)\320\227\320\260\320\277\320\276\320\273\320\275\320\270\321\202\320\265 \320\277\320\276\320\273\321\217:</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">- \320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\270\320\274\320\265\320\275\320\270</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">- \320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\204\320\260\320\274\320\270\320\273\320\270\320\270</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">- \320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \321\202\320\265\320\273\320\265\321\204\320\276\320\275\321\203</span></p>\n"
-"<p style=\" mar"
-                        "gin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">- \320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\277\320\276\321\207\321\202\320\265</span></p>\n"
+"<p style=\" ma"
+                        "rgin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">- \320\235\320\260\320\271\321\202\320\270 \320\277\320\276 \320\277\320\276\321\207\321\202\320\265</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">2)\320\235\320\260\320\266\320\274\320\270\321\202\320\265 \320\272\320\275\320\276\320\277\320\272\321\203 &quot;\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\262 \320\261\320\260\320\267\321\203 \320\264\320\260\320\275\320\275\321\213\321\205&quot;</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">3)\320\247\321\202\320\276\320\261\321\213 \320\275\320\260\320\271\321\202\320\270 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321"
                         "\217 \320\277\320\276 ID (\321\203\320\275\320\270\320\272\320\260\320\273\321\214\320\275\320\276\320\274\321\203 \320\270\320\275\320\264\320\270\321\204\320\270\320\272\320\260\321\202\320\276\321\200\321\203), \320\262\320\262\320\265\320\264\320\270\321\202\320\265 \320\275\320\276\320\274\320\265\321\200 ID \320\270 \320\275\320\260\320\266\320\274\320\270\321\202\320\265 \320\272\320\275\320\276\320\277\320\272\321\203 &quot;\320\235\320\260\320\271\321\202\320\270 \320\277\320\276 ID&quot;</span></p>\n"
@@ -405,6 +477,13 @@ public:
 "<p style=\" margi"
                         "n-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">\320\265\320\263\320\276 \320\275\320\276\320\274\320\265\321\200 \320\270 \320\275\320\260\320\266\320\274\320\270\321\202\320\265 \320\272\320\275\320\276\320\277\320\272\321\203 &quot;\321\203\320\264\320\260\320\273\320\270\321\202\321\214 \320\267\320\260\320\277\320\270\321\201\321\214 \320\277\320\276 ID&quot; \320\275\320\260 \320\277\320\260\320\275\320\265\320\273\320\270 \321\201\320\277\321\200\320\260\320\262\320\260</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;\"><br /></p></body></html>", nullptr));
+        data_base_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "QMYSQL", nullptr));
+        host_name_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "127.0.0.1", nullptr));
+        data_base_name_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "data_base", nullptr));
+        user_name_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "root", nullptr));
+        port_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "3306", nullptr));
+        password_lineEdit->setText(QCoreApplication::translate("QtSQLProjectClass", "login13", nullptr));
+        pushButton_connection->setText(QCoreApplication::translate("QtSQLProjectClass", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217", nullptr));
     } // retranslateUi
 
 };
