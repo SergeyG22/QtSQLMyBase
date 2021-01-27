@@ -1,4 +1,3 @@
 Интерфейс для подключения и работы с базой данных.Представляет из себя простую графическую форму для заполнения базы данных пользователями. 
 
-
-![559458676](https://user-images.githubusercontent.com/46799640/64565356-39b31380-d35c-11e9-9c2a-2edc8e9deb37.png)
+![Image alt](https://github.com/SergeyG22/QtSQLMyBase/blob/master/QtSQLProject/logo.png)
